@@ -27,10 +27,13 @@ function initPage() {
      const creditText = document.createElement('span');
      creditText.innerHTML = "Background image by\
      <a href=https://unsplash.com/@stefany_andrade>Stefany Andrade</a>\
-     on <a href=https://unsplash.com/>Unsplash.</a>. "
+     on <a href=https://unsplash.com/>Unsplash.</a>\
+     <a href=https://github.com/ApolloIV92/restaurant/blob/main/README.md>\
+      Additional image credits.</a>"
 
     footer.appendChild(githubLink);
     footer.appendChild(footerText);
+    footer.appendChild(creditText);
 
     homePageBtn.addEventListener("click", () => loadHomePage());
     menuBtn.addEventListener("click", () => loadMenuPage());

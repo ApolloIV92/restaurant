@@ -3,6 +3,8 @@ to bundle modules together (thus the tab style design that calls a js module to 
 
 Image credits:
 
+- Background (https://unsplash.com/photos/GbSCAAsU2Fo) by Stefany Andrade (https://unsplash.com/@stefany_andrade)
+
 - Home page image (https://unsplash.com/photos/dXGl11H1Kbg) by Harsh Pandey (https://unsplash.com/@harsh_clicks__)
 
 - Menu image one (https://unsplash.com/photos/zI27XpN1GdA) by René Porter (https://unsplash.com/@reneporter)
