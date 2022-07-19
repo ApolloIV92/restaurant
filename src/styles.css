@@ -24,6 +24,7 @@ body {
 }
 
 #mainWrapper {
+    width: min(95vw, 100%);
     display: grid;
     grid-template-rows: 70px 2fr;
     grid-template-columns: 1fr;
@@ -33,8 +34,7 @@ body {
 }
 
 #header {
-
-    width: 100%;
+    width: min(90vw, 100%);
     display: flex;
     justify-content: center;
     align-self: end;
@@ -42,6 +42,7 @@ body {
 }
 
 #header button {
+    position: relative;
     appearance: none;
     margin-top: 10px;
     width: 225px;
@@ -51,15 +52,16 @@ body {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 0px;
-    background-color: var(--colorThree);
+    background-color: var(--colorTwo);
+    color: var(--colorFour);
     cursor: pointer;
+    transition: background-color 0.2s;
 
 }
 
 #header button:hover {
-    transition: background-color 0.2s;
-    background-color: var(--colorTwo);
-    color: var(--colorFour);
+    background-color: var(--colorThree);
+    color: black;
 }
 
 .logo {
@@ -67,52 +69,71 @@ body {
     font-size: 6rem;
 }
 
+.subLogo {
+    font-family: 'MyFont';
+    font-size: 2rem;
+}
+
 .headerWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1000px;
+    align-self: start;
+    width: min(95vw, 1100px);
     padding: 10px;
-    margin-top: -63px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     box-shadow: 0px 2px 4px black;
     background-color: var(--colorOne);
-    justify-self: flex-start;
+    
+}
+
+.contentHome, .contentMenu, .contentContact {
+    background-color: var(--colorFive);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: min(95vw, 1100px);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
 }
 
 .contentHome {
-    background-color: var(--colorFive);
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: 1000px;
     height: 100vh;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px black;
-    padding: 3rem;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.contentHome img {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .contentMenu {
-    background-color: var(--colorFive);
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: 1000px;
-    height: 100vh;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px black;
-    padding: 3rem;
+    grid-template-rows: 150px 400px 400px 400px;
+    row-gap: 10px;
 }
 
-#content img {
+.contentContact {
+    grid-template-rows: 150px 600px 100px;
+}
+
+.contentHome p, .contentMenu p, .contentContact p:last-child {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.contentContact p {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img {
     border-radius: 4px;
+    box-shadow: 2px 2px 4px black;
 }
 
 
@@ -120,10 +141,40 @@ body {
 .menuItem {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 450px;
-    height: 300px;
-    border: 2px solid black;
+    width: 550px;
+    height: 350px;
     border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+    background-color: var(--colorOne);
+}
+
+.menuItemHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+    width: 450px;
+    height: 100px;
+    background-color: var(--colorTwo);
+}
+
+.menuItem img {
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px black;
+}
+.menuItem h1 {
+    padding-top: 10px;
+    font-size: 5rem;
+    font-family: 'MyFont';
+}
+
+.menuItemText {
+    font-size: 1rem;
+    padding-top: 10px;
+    text-align: center;
 }

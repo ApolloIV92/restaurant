@@ -1,5 +1,7 @@
 import { clearPage } from './index.js';
 import MenuPictureOne from './menuOne.jpg'
+import MenuPictureTwo from './menuTwo.jpg';
+import MenuPictureThree from './menuThree.jpg';
 
 export function loadMenuPage() {
     clearPage();
@@ -16,18 +18,18 @@ export function loadMenuPage() {
     const headerWrapper = document.createElement('div');
     headerWrapper.classList.add('headerWrapper')
 
-    const para = document.createElement("p");
-    para.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit.\
-    Suscipit quasi harum minima amet, cumque saepe velit, \
-    eum corrupti ipsa, expedita odit ab ipsum? Dolores \
-    harum iure impedit exercitationem aliquid aspernatur."
-
-
-
     headerWrapper.appendChild(header);
     content.appendChild(headerWrapper);
-    content.appendChild(menuItem("Chai Tea", MenuPictureOne, "test"));
-    content.appendChild(para);
+    content.appendChild(menuItem("Chai Tea", MenuPictureOne, "The basic\
+    -but still mighty- Chai Tea. Price: $4.99"));
+    content.appendChild(menuItem("Chamomile Elixir", MenuPictureTwo, "Relaxing\
+    and delicious Chamomile tea. Fit to soothe all of your anxieties. Price: \
+    $3.99"))
+    content.appendChild(menuItem("Sleepyhead Special", MenuPictureThree, "Do\
+    you truly wish to experience complete serenity? To slumber without care,\
+    and to escape to the ethereal world of Dreams? Imbibe of our founder's\
+    own special concoction, the Sleepyhead Special.\
+    Price: 12x Violet Crystals"))
 
     wrapper.appendChild(content);
 }
@@ -36,15 +38,23 @@ export function loadMenuPage() {
 function menuItem(name, img, description) {
     const title = document.createElement("h1");
     title.textContent = name;
+
+    const header = document.createElement('div');
+    header.classList.add('menuItemHeader');
+    header.appendChild(title);
+
     const itemDescription = document.createElement("p");
     itemDescription.textContent = description;
+    itemDescription.classList.add('menuItemText');
+
     const picture = new Image();
     picture.src = img;
     picture.width = "300";
 
     const wrapper = document.createElement("div");
     wrapper.classList.add("menuItem");
-    wrapper.appendChild(title);
+
+    wrapper.appendChild(header);
     wrapper.appendChild(picture);
     wrapper.appendChild(itemDescription);
 
