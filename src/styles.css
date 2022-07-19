@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./tangerine.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --colorOne: #844D36;
+    --colorTwo: #474853;
+    --colorThree: #86B3D1;
+    --colorFour: #AAA0A0;
+    --colorFive: #8E8268;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./background.jpg');
+}
+
+#mainWrapper {
+    display: grid;
+    grid-template-rows: 70px 2fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 1rem;
+}
+
+#header {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: end;
+    gap: 40px;
+}
+
+#header button {
+    appearance: none;
+    margin-top: 10px;
+    width: 225px;
+    line-height: 3rem;
+    border: none;
+    box-shadow: 2px -2px 4px black;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 0px;
+    background-color: var(--colorThree);
+    cursor: pointer;
+
+}
+
+#header button:hover {
+    transition: background-color 0.2s;
+    background-color: var(--colorTwo);
+    color: var(--colorFour);
+}
+
+.logo {
+    font-family: 'MyFont';
+    font-size: 6rem;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    padding: 10px;
+    margin-top: -63px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px 2px 4px black;
+    background-color: var(--colorOne);
+    justify-self: flex-start;
+}
+
+.contentHome {
+    background-color: var(--colorFive);
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 1000px;
+    height: 100vh;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+    padding: 3rem;
+}
+
+.contentMenu {
+    background-color: var(--colorFive);
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 1000px;
+    height: 100vh;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px black;
+    padding: 3rem;
+}
+
+#content img {
+    border-radius: 4px;
+}
+
+
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
