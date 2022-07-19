@@ -9,6 +9,8 @@ function initPage() {
     const homePageBtn = document.getElementById("homePage");
     const menuBtn = document.getElementById("menu");
     const contactBtn = document.getElementById("contact");
+
+    
     
     const footer = document.getElementById('footer');
     

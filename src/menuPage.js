@@ -49,7 +49,7 @@ function menuItem(name, img, description) {
 
     const picture = new Image();
     picture.src = img;
-    picture.width = "300";
+    picture.width = "425";
 
     const wrapper = document.createElement("div");
     wrapper.classList.add("menuItem");
